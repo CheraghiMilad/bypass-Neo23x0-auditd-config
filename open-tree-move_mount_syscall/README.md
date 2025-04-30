@@ -1,6 +1,9 @@
-## I use the move_mount and open_tree syscalls to clone and mount /proc to /tmp.
 
- location (e.g., /tmp/proc_copy) using the open_tree and move_mount syscalls, which are available in recent Linux kernel versions.
+## Bypassing the Neo23x0 (Florian Roth) auditd Configuration Using the move_mount and open_tree syscalls.
+
+I use the move_mount and open_tree syscalls to clone and mount /proc to /tmp.
+
+location (e.g., /tmp/proc_copy) using the open_tree and move_mount syscalls, which are available in recent Linux kernel versions.
 
 The program begins by ensuring the target directory (/tmp/proc_copy) exists, creating it if necessary. It then invokes the open_tree syscall with the OPEN_TREE_CLONE and AT_RECURSIVE flags to create a clone of the /proc mount point. This operation returns a file descriptor representing the mount tree.
 
