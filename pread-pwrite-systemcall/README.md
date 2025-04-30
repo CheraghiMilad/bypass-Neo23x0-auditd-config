@@ -1,4 +1,7 @@
-## I use the pread and pwrite systemcalls to read and write without any evidens
+## Bypassing the Neo23x0 (Florian Roth) auditd Configuration Using the pread and pwrite systemcalls.
+
+
+I use the pread and pwrite systemcalls to read and write without any evidens
 
 
 This C code is designed to demonstrate reading and writing to a sensitive file, specifically the SSH private key file (~/.ssh/id_rsa), using the system calls pread and pwrite.
