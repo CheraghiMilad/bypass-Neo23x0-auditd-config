@@ -1,4 +1,4 @@
-## Bypassing the Neo23x0 (Florian Roth) auditd Configuration Using the readر and writev systemcalls.
+## Bypassing the Neo23x0 (Florian Roth) auditd Configuration Using the readv and writev systemcalls.
 
 I use the readv and writev systemcalls to read and write /etc/passwd without any evidens as (non-root)
 
@@ -11,3 +11,5 @@ The key idea behind readv is that it allows data to be scattered into multiple b
 Similarly, writev performs the gathering operation by taking multiple buffers and writing them out sequentially to a file descriptor in one call. This is very useful when constructing responses for sockets or writing structured logs or files, as it avoids concatenating data into a temporary buffer before writing. It also makes the code cleaner and easier to maintain by separating different pieces of data logically in memory.
 
 These system calls are particularly useful in performance-critical applications such as network servers, databases, or sandboxing systems where you want to minimize syscalls and memory copying. However, they are low-level and require precise memory management and buffer coordination. Also, the total number of bytes transferred may be less than the total size of the iovec array, so partial read/writes should always be handled correctly in robust applications.
+
+[You can see the PoC here](https://youtu.be/pPUtbYm8bbo)
