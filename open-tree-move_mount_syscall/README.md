@@ -13,3 +13,6 @@ By remounting /proc in this way, it's possible to interact with a fresh view of 
 
 This technique highlights the need for security configurations and auditing rules to consider newer kernel features and syscalls that may be leveraged to perform privileged operations in unconventional ways.
 
+[You can see the PoC here](https://youtu.be/QnwNuHu15C8?si=bXoxMp4Axj_nFHBI)
+
+

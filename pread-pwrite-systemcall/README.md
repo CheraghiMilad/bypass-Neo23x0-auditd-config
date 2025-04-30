@@ -17,3 +17,5 @@ This C code is designed to demonstrate reading and writing to a sensitive file, 
 
     Error Handling:
     The code checks for errors at each step, including opening the file, reading from it, and writing to it. If any operation fails, the program prints an error message and exits.
+
+    [You can see the PoC here](https://youtu.be/ExjJFdVLU3o?si=8KpFIH16AO5C8czm)

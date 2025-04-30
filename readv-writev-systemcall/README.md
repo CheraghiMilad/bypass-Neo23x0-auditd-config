@@ -12,4 +12,4 @@ Similarly, writev performs the gathering operation by taking multiple buffers an
 
 These system calls are particularly useful in performance-critical applications such as network servers, databases, or sandboxing systems where you want to minimize syscalls and memory copying. However, they are low-level and require precise memory management and buffer coordination. Also, the total number of bytes transferred may be less than the total size of the iovec array, so partial read/writes should always be handled correctly in robust applications.
 
-[You can see the PoC here](https://youtu.be/pPUtbYm8bbo)
+[You can see the PoC here](https://youtu.be/pPUtbYm8bbo?si=lnBn-6idfo9wIwEE)
