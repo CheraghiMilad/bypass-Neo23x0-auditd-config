@@ -1,0 +1,26 @@
+#      ___             ___ __      __
+#     /   | __  ______/ (_) /_____/ /
+#    / /| |/ / / / __  / / __/ __  /
+#   / ___ / /_/ / /_/ / / /_/ /_/ /
+#  /_/  |_\__,_/\__,_/_/\__/\__,_/
+#
+# Linux Audit Daemon - Best Practice Configuration For Our Bypass Techniques
+# /etc/audit/audit.rules
+#
+# Compiled by Milad Cheraghi
+#
+# Created  : 2025/05/02
+# Modified : 2025/05/02
+#
+#
+# Bypass Detections ---------------------------------------------------------------------
+#
+## fexecve
+### Web Server Activity
+#### Change the number "33" to the ID of your WebServer user. Default: www-data:x:33:33
+-a always,exit -F arch=b64 -S execve -F euid=33 -k detect_execve_www
+
+### Root command executions
+-a always,exit -F arch=b64 -F euid=0 -F auid>=1000 -F auid!=-1 -S execveat -k rootcmd
+
+
